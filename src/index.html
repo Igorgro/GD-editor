@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gravity defied level editor</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="editor.js"></script>
+        <script src="variables.js"></script>
+        <script src="misc.js"></script>
+        <script src="drawing.js"></script>
+        <script src="processing.js"></script>
+    </head>
+    <body>
+        <div id="left-panel" class="block">
+            <div class="block">
+                Editor:<br>
+                <input type="radio" name="mode" value="Draw" onclick="changeMode()" checked> Draw
+                <input type="radio" name="mode" value="Move" onclick="changeMode()"> Move<br>
+                <input type="checkbox" onchange="toggleGrid(this)" checked> Grid
+            </div>
+            <div class="block">
+                Level name:<br>
+                <input type="text" id="level-name"><br>
+                Author:<br>
+                <input type="text" id="author"><br>
+                Theme<br>
+                <select id="theme" onchange="updateCanvas()">
+                    <option name="Dustbowl">Dustbowl</option>
+                    <option name="Beach">Beach</option>
+                    <option name="Green">Green</option>
+                    <option name="french">French</option>
+                    <option name="Crisp">Crisp</option>
+                    <option name="Sunny">Sunny</option>
+                </select><br>
+                3 stars:<br>
+                <input type="text" id="three-stars"><br>
+                2 stars:<br>
+                <input type="text" id="two-stars"><br>
+                1 star:<br>
+                <input type="text" id="one-star"><br>
+            </div>
+            <div class="block">
+                File:<br>
+                <input type="file" id="loadedFile">
+                <input type="button" value="Open" onclick="load()"><br><br>
+                <input type="text" id="filename" placeholder="Filename">
+                <input type="button" value="Save" onclick="save()">
+                <a href="#" id="download-link">Download</a>
+            </div>
+        </div>
+        <div id="editor" onclick="addPoint(-1, -1)">
+            <div id = "biker" class="draggable"></div>
+            <div id = "goal" class="draggable"></div>
+            <canvas width="5000" height="1060" id="editor-canvas"></canvas>
+        </div>
+    </body>
+</html>
