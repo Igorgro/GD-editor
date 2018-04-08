@@ -1,0 +1,101 @@
+body{
+    user-select: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+#left-panel{
+    margin-bottom: 0px;
+    position: absolute;
+    top:10px;
+    left: 10px;
+    bottom: 10px;
+    width:250px;
+}
+.block{
+    padding: 10px;
+    border: solid 1px #727272;
+    margin-bottom: 10px;
+}
+#editor{
+    overflow: scroll;
+    position: absolute;
+    top:10px;
+    right: 10px;
+    bottom: 10px;
+    left:290px;
+    border: solid 1px #727272;
+}
+
+#biker{
+    position: absolute;
+    width: 120px;
+    height: 105px;
+    background-image: url("biker.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#goal{
+    position: absolute;
+    width: 30px;
+    height: 84px;
+    left: 100px;
+    background-image: url("goal.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.point{
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #b6e2da;
+    border: 2px solid #729aad;
+    border-radius: 10px;
+}
+
+#save-dialog, #open-dialog {
+    visibility: hidden;
+    position: absolute;
+    background-color: #c7ffb9;
+    border: solid 1px #727272;
+    width: 300px;
+    height: 500px;
+    left:calc(50% - 150px);
+    top:calc(50% - 250px);
+    padding: 10px;
+}
+#save-dialog>textarea, #open-dialog>textarea{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
